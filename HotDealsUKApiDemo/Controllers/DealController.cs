@@ -11,13 +11,14 @@ namespace HotDealsUKApiDemo.Controllers
     {
         private List<Deal> FindAllDeals()
 		{
-			List<Deal> dealList = new List<Deal>();
+			var dealList = new List<Deal>();
 
 			for (int i = 0; i < 10; i++)
 			{
-				Deal currentDeal = new Deal();
-				currentDeal.ID = i;
-				currentDeal.Name = i.ToString() + "- Deal";
+				var currentDeal = new Deal{
+				     currentDeal.ID = i;
+				     currentDeal.Name = i.ToString() + "- Deal";
+				}
 				dealList.Add(currentDeal);
 			}
 
